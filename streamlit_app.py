@@ -5,7 +5,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.neighbors import KNeighborsRegressor
 
 # --- App Title ---
-st.title("🌍 Life Expectancy Predictor (2-Feature KNN Model)")
+st.title("Life Expectancy Predictor (2-Feature KNN Model)")
 
 st.markdown("""
 This app predicts life expectancy using two predictors from WHO 2014 data:
@@ -17,8 +17,8 @@ The model uses K-Nearest Neighbors with **k=4**, trained on 2014 country-level d
 """)
 
 # --- User Inputs ---
-income_comp = st.slider("💰 Income Composition of Resources (0–1)", 0.0, 1.0, 0.6, step=0.01)
-score_edu_hiv = st.number_input("📊 Score_Edu_HIV (Schooling / HIV/AIDS)", min_value=0.1, max_value=20.0, value=2.5)
+income_comp = st.slider("Income Composition of Resources (0–1)", 0.0, 1.0, 0.6, step=0.01)
+score_edu_hiv = st.number_input("Score_Edu_HIV (Schooling / HIV/AIDS)", min_value=0.1, max_value=20.0, value=2.5)
 
 # --- Prediction Input ---
 X_input = pd.DataFrame({
